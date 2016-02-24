@@ -24,3 +24,10 @@ end
 
 #  in the first way of using Hash#each we specify the key, value as parameters to the block
 
+def iter_hash(hash)
+  hash.each do | key, value|
+    puts key
+    puts value
+  end
+end
+
