@@ -22,4 +22,8 @@
 # non-destructive selection or rejection
 # use select reject drop_while
 
-options pricing in the future
+hackerrank.store(543121, 100 )
+
+hackerrank.keep_if{ |key, value| key.is_a?Integer}
+
+hackerrank.delete_if{ | key, value| key % 2 == 0}
