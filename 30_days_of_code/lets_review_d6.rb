@@ -1,5 +1,5 @@
-# Enter your code here. Read input from STDIN. Print output to STDOUT
-space = gets.chomp.to_i
+  # Enter your code here. Read input from STDIN. Print output to STDOUT
+number = gets.chomp.to_i
 def print_even_odd(input_string)
     even_string = ""
     odd_string = ""
@@ -10,18 +10,18 @@ def print_even_odd(input_string)
 	odd_string = odd_string + input_string[i]
       end
     end
-    puts "#{even_string}  #{odd_string}"
+    print even_string
+    print" "
+    print odd_string
+    puts ""
 end
 
 
-input = gets.chomp
-while(input)
-    
-    print_even_odd(input) 
-    input = gets.chomp
-    
-	  
+for i in (1..number) do
+      input = gets.chomp
+      print_even_odd(input)
+
 end
 
-puts "30 days of code review"
+
 
