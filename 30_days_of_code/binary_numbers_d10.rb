@@ -12,6 +12,22 @@ while(n > 0) do
 	n = n/2
 end
 
-p binaries
+#p binaries
 
+length = binaries.size
+max = 0
+local = 0
+for i in (0.. length) do 
+	if(binaries[i] == 1)
+		local += 1
+		
+		
+	else
+		local = 0
+	end
+	if ( local > max)
+		max = local
+	end
+end
 
+puts max
