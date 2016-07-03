@@ -13,8 +13,8 @@ end
 index_of_last_swap = n-2
 tempSwp = 1
 while (tempSwp > 0) do
+ tempSwp = 0
   for i in ( 0 .. index_of_last_swap ) do
-      tempSwp = 0
           #puts a[i]
           if ( a[i] > a[i+1])
               tempSwp += 1
