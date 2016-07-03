@@ -11,17 +11,22 @@ def swap(right_index, left_index, arr)
 end
 
 index_of_last_swap = n-2
-for i in ( 0 .. index_of_last_swap ) do
-        puts a[i]
-        if ( a[i] > a[i+1])
-                numSwaps += 1
-                swap(i, i+1, a)
-                index_of_last_swap = i
-        end
-        puts a[index_of_last_swap]
+tempSwp = 1
+while (tempSwp > 0) do
+  for i in ( 0 .. index_of_last_swap ) do
+      tempSwp = 0
+          #puts a[i]
+          if ( a[i] > a[i+1])
+              tempSwp += 1
+                  numSwaps += 1
+                  swap(i, i+1, a)
+                  index_of_last_swap = i
+          end
+          #puts a[index_of_last_swap]
+  end
 end
 
-p a
+#p a
 
 puts "Array is sorted in #{numSwaps} swaps."
 puts "First Element: #{a[0]}"
