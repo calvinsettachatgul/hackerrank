@@ -16,7 +16,7 @@ marks = {"Ramesh":23, "Vivek":40, "Harsh":88, "Mohammad":60}
 def group_by_marks(marks, n)
    # your code here
    new_grouping = marks.group_by do | student_first_name, score|
-     if (score >=30) 
+     if (score >= n) 
           "Passed"
      else
           "Failed"
@@ -25,6 +25,6 @@ def group_by_marks(marks, n)
    return new_grouping
 end
 
-grouped_results = group_by_marks(marks, 30)
+grouped_results = group_by_marks(marks, n)
 
 puts grouped_results
