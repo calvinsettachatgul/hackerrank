@@ -37,10 +37,9 @@ Sample Output
 
 #!/bin/ruby
 
-n = gets.strip.to_i
+# n = gets.strip.to_i
 arr = gets.strip
 arr = arr.split(' ').map(&:to_i)
-
 for num in n .. 0 do
 	print num
 end
