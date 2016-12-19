@@ -1,5 +1,6 @@
 # URL
 # https://www.hackerrank.com/challenges/arrays-ds
+require 'pry-byebug'
 
 =begin
 Arrays - DS
@@ -38,8 +39,17 @@ Sample Output
 #!/bin/ruby
 
 # n = gets.strip.to_i
-arr = gets.strip
+# arr = gets.strip
+
+n = 4
+arr = "1 2 3 4"
+
 arr = arr.split(' ').map(&:to_i)
-for num in n .. 0 do
-	print num
+result_str = ""
+r = (n-1..0)
+
+r.first.downto(r.last).each do |number|
+    result_str += arr[number].to_s + " "
 end
+
+puts result_str
