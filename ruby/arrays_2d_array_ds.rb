@@ -84,7 +84,7 @@ puts imax, jmax
 
 max = 0
 sum = 0
-
+=begin
 Arr = [ 
 	[1,2,3,4,5,6],
 	[1,2,3,4,5,6],
@@ -93,11 +93,18 @@ Arr = [
 	[1,2,3,4,5,6],
 	[1,2,3,4,5,6]
 ]
+=end
 
+Arr = [ [1, 2,3], [1,2,3], [1,2,3]]
+
+puts "test"
 for i in (0..imax) do
 	 for j in (0..jmax) do
-		 if ((i != 2 && j != 0) || ( i != 1 && j != 3))
-			puts "#{i}, #{j}  #{Arr[j][i]}"
-		 end
+		  #if (!(i == 0 && j == 1) || !( i == 2 && j == 1))
+		  if (!(i == 0 && j == 1) || !( i==2 && j ==1) )
+			puts "#{i}, #{j} #{Arr[i][j]}"
+		  else
+			puts "#{i}, #{j} condition satisfied"
+		  end
 	end
 end
