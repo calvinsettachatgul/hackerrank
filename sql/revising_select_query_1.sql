@@ -1,0 +1,7 @@
+ID NUMBER
+NAME VARCHAR (17)
+COUNTRYCODE VARCHAR(3)
+DISTRICT VARCHAR(20)
+POPULATION NUMBER
+
+select * from city where population > 100000 and countrycode = 'USA';
