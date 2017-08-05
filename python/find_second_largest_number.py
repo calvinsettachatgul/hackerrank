@@ -25,16 +25,20 @@ n = int(input())
 arr = map(int, input().split())
 
 arr = [i for i in arr]
-two_largest = [ arr[0], arr[1]]
-two_largest[0] = arr[0]
-two_largest[1] = arr[1]
+if( arr[0] > arr[1]):
+	two_largest = [ arr[0], arr[1]]
+elif( arr[1] > arr[0]):
+	two_largest = [ arr[1], arr[0]]
+else:
+	two_largest = [ arr[0], arr[0]]
 for i in arr:
 	if( i > two_largest[1] and i < two_largest[0]):	
 		two_largest[1] = i
 	elif( i > two_largest[0]):
 		two_largest[1] = two_largest[0]
 		two_largest[0] = i
-
+	
+print(two_largest[1])
 	
 '''
 initial 
