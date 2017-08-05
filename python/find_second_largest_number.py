@@ -32,13 +32,18 @@ elif( arr[1] > arr[0]):
 else:
 	two_largest = [ arr[0], arr[0]]
 for i in arr:
+	print (two_largest)
 	if( i > two_largest[1] and i < two_largest[0]):	
 		two_largest[1] = i
 	elif( i > two_largest[0]):
 		two_largest[1] = two_largest[0]
 		two_largest[0] = i
+	elif( two_largest[0] == two_largest[1] and i < two_largest[0]):
+		two_largest[1] = i
 	
 print(two_largest[1])
+
+
 	
 '''
 initial 
