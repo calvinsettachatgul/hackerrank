@@ -28,4 +28,5 @@ https://www.hackerrank.com/challenges/weather-observation-station-4/problem
 
 Let N be the number of City entries in Station and let N' be the number of distinct City names in Station query the value of N - N' from Station. In other words, find the difference between the total number of City entries in the table and the number of distinct City entries in the table.
 
+SELECT DISTINCT((SELECT COUNT(*) AS Total FROM STATION )- (SELECT COUNT(DISTINCT CITY) Total2 FROM STATION) ) FROM STATION;
 
