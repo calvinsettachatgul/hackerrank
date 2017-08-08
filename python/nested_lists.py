@@ -16,12 +16,13 @@ Output Format
 Print the name(s) of any student(s) having the second lowest grade in Physics; if there are multiple students, order their names alphabetically and print each one on a new line.
 
 '''
+collector = []
 
 for _ in range(int(input())):
 	name = input()
-	score = float(input());
-
-	print(name)	
+	score = float(input())
+	collector.append([name, score])
+	print(name)
 	print(score)
 
-
+print(collector)
