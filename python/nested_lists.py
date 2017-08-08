@@ -16,13 +16,19 @@ Output Format
 Print the name(s) of any student(s) having the second lowest grade in Physics; if there are multiple students, order their names alphabetically and print each one on a new line.
 
 '''
-collector = []
+scores = {}
+scores_list = []
+for _ in range(int(raw_input())):
+    name = raw_input()
+    score = float(raw_input())
+    scores_list.append(score)
+    person = scores.get(score, "nobody")
+    if (person != "nobody"):
+        scores[score].append(name)
 
-for _ in range(int(input())):
-	name = input()
-	score = float(input())
-	collector.append([name, score])
-	print(name)
-	print(score)
-
-print(collector)
+    else:
+        scores[score] = [name]
+    
+scores_list = set(scores_list)
+for person in sorted(scores[sorted(list(scores_list))[1]]):
+   print(person)
