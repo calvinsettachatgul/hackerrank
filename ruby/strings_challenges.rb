@@ -40,3 +40,7 @@ str = "With heart!"
 print("My String's encoding: ", str.encoding.name)
 print("\nMy String's encoding: ", str.size)
 print("\nMy String's bytesize: ", str.bytesize)
+
+def transcode (str)
+	str.force_encoding("UTF-8")
+end
