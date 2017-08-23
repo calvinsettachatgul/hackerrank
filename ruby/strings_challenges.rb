@@ -44,3 +44,8 @@ print("\nMy String's bytesize: ", str.bytesize)
 def transcode (str)
 	str.force_encoding("UTF-8")
 end
+
+puts "Test for Encoding"
+
+my_string = "this is just a string"
+p transcode( my_string ).encoding.name == "UTF-8"
