@@ -6,11 +6,6 @@ def take(arr, skip=1)
     arr.drop(skip)
 end
 
-# driver code
-
-=begin
-
 my_arr = [1,2,3]
-p take(my_arr, 1)
 
-=end
+p take(my_arr, 1)
